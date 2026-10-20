@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório Interativo de Arrays</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Laboratório Interativo de Arrays</h1>
+        <p> push(), map(), filter() e splice()</p>
+    </header>
+
+    <main>
+        <section class="painel">
+            <h2>Array principal</h2>
+            <p>Todos os laboratórios utilizam este mesmo array.</p>
+            <div id="arrayPrincipal" class="resultado"></div>
+        </section>
+
+        <section class="painel">
+            <h2>1. Adicionar valores — push()</h2>
+
+            <label for="valorNovo">Valor em reais:</label>
+            <input type="number" id="valorNovo" min="0" step="0.01"
+                   placeholder="Ex.: 15.50">
+
+            <button onclick="adicionarValor()">Adicionar valor</button>
+
+            <div id="resultadoPush" class="resultado"></div>
+        </section>
+
+        <section class="painel">
+            <h2>2. Transformar valores — map()</h2>
+
+            <label for="tipoMap">Escolha a transformação:</label>
+            <select id="tipoMap">
+                <option value="dolar">Converter para dólar</option>
+                <option value="euro">Converter para euro</option>
+                <option value="emoji">Mostrar emoji de dinheiro</option>
+            </select>
+
+            <button onclick="transformarArray()">Executar map()</button>
+
+            <p class="explicacao">
+                Taxas didáticas fixas: US$ 1 = R$ 5,00 e
+                € 1 = R$ 5,50. Não são cotações em tempo real.
+            </p>
+
+            <div id="resultadoMap" class="resultado"></div>
+        </section>
+
+        <section class="painel">
+            <h2>3. Filtrar valores — filter()</h2>
+
+            <label for="tipoFiltro">Escolha uma condição:</label>
+            <select id="tipoFiltro">
+                <option value="menor">Menores que R$ 10,00</option>
+                <option value="meio">De R$ 10,00 até R$ 20,00</option>
+                <option value="maior">Maiores que R$ 20,00</option>
+            </select>
+
+            <button onclick="filtrarArray()">Executar filter()</button>
+
+            <div id="resultadoFilter" class="resultado"></div>
+        </section>
+
+        <section class="painel">
+            <h2>4. Remover valores — splice()</h2>
+
+            <p>Índices atuais:</p>
+            <div id="listaIndices" class="resultado"></div>
+
+            <label for="indiceInicio">Índice inicial:</label>
+            <input type="number" id="indiceInicio" min="0" step="1"
+                   placeholder="Ex.: 1">
+
+            <label for="quantidade">Quantidade de itens para remover:</label>
+            <input type="number" id="quantidade" min="1" step="1"
+                   placeholder="Ex.: 2">
+
+            <button onclick="removerValores()">Executar splice()</button>
+
+            <div id="resultadoSplice" class="resultado"></div>
+        </section>
+
+        <section class="painel">
+            <div class="titulo-historico">
+                <h2>Histórico das operações</h2>
+                <button class="secundario" onclick="limparHistorico()">
+                    Limpar histórico
+                </button>
+            </div>
+
+            <ul id="historico"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>Atividade de laboratório — JavaScript e Arrays</p>
+    </footer>
+</body>
+</html>

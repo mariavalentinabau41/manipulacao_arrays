@@ -1,0 +1,145 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+}
+
+header {
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    margin-top: 0;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.painel {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #d9e2ec;
+}
+
+h2 {
+    color: #102a43;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+input,
+select {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px;
+    border: 1px solid #bcccdc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    display: block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #247ba0;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #185d7a;
+}
+
+button.secundario {
+    margin-top: 0;
+    background-color: #52606d;
+}
+
+.resultado {
+    background-color: #f0f4f8;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+.explicacao {
+    color: #52606d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.checklist {
+    padding-left: 22px;
+    line-height: 1.8;
+}
+
+.checklist li {
+    margin-bottom: 5px;
+}
+
+.titulo-historico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#historico {
+    padding-left: 22px;
+}
+
+#historico li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.removido {
+    color: #c62828;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #52606d;
+    padding: 10px 15px 25px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    .painel {
+        padding: 15px;
+    }
+}
